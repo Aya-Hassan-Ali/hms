@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="doctors_action" model="ir.actions.act_window">
+            <field name="name">doctors</field>
+            <field name="res_model">hms.doctors</field>
+            <field name="view_mode">tree,form,kanban,search,graph</field>
+        </record>
+
+         <record id="doctor_tree_view" model="ir.ui.view">
+            <field name="name">doctors tree view</field>
+            <field name="model">hms.doctors</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="fName"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem id="hms_doctors" name="doctors" sequence="4" parent="hms_menu" action="doctors_action"/>
+    </data>
+</odoo>

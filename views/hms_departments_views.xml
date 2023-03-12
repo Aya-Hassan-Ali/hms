@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record id="departments_action" model="ir.actions.act_window">
+            <field name="name">Department</field>
+            <field name="res_model">hms.departments</field>
+            <field name="view_mode">tree,form,kanban,search,graph</field>
+        </record>
+
+         <record id="department_tree_view" model="ir.ui.view">
+            <field name="name">departments tree view</field>
+            <field name="model">hms.departments</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <menuitem id="hms_departments" name="departments" sequence="3" parent="hms_menu" action="departments_action"/>
+    </data>
+</odoo>
